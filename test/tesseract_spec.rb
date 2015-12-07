@@ -80,7 +80,7 @@ describe Tesseract::Engine do
 			engine.image = 'second.png'
 			engine.select 242, 191, 129, 31
 
-			expect(engine.hocr).to eq("  <div class='ocr_page' id='page_1' title='image \"\"; bbox 242 191 129 31; ppageno 0'>\n   <div class='ocr_carea' id='block_1_1' title=\"bbox 242 191 371 222\">\n    <p class='ocr_par' dir='ltr' id='par_1_1' title=\"bbox 250 200 365 213\">\n     <span class='ocr_line' id='line_1_1' title=\"bbox 250 200 365 213; baseline 0 0\"><span class='ocrx_word' id='word_1_1' title='bbox 250 200 275 213; x_wconf 94' lang='eng' dir='ltr'>OH</span> <span class='ocrx_word' id='word_1_2' title='bbox 285 200 313 213; x_wconf 90' lang='eng' dir='ltr'>HAI</span> <span class='ocrx_word' id='word_1_3' title='bbox 323 200 365 213; x_wconf 86' lang='eng'>1234</span> \n     </span>\n    </p>\n   </div>\n  </div>\n")
+			expect(engine.hocr).to eq("  <div class='ocr_page' id='page_1' title='image \"\"; bbox 242 191 129 31; ppageno 0'>\n   <div class='ocr_carea' id='block_1_1' title=\"bbox 250 200 365 213\">\n    <p class='ocr_par' dir='ltr' id='par_1_1' title=\"bbox 250 200 365 213\">\n     <span class='ocr_line' id='line_1_1' title=\"bbox 250 200 365 213; baseline 0 0\"><span class='ocrx_word' id='word_1_1' title='bbox 250 200 275 213; x_wconf 94' lang='eng' dir='ltr'>OH</span> <span class='ocrx_word' id='word_1_2' title='bbox 285 200 313 213; x_wconf 90' lang='eng' dir='ltr'>HAI</span> <span class='ocrx_word' id='word_1_3' title='bbox 323 200 365 213; x_wconf 86' lang='eng'>1234</span> \n     </span>\n    </p>\n   </div>\n  </div>\n")
 		end
 
 		it 'raises when going out of the image boundaries' do
